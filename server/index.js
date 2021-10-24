@@ -1,21 +1,13 @@
 const express = require('express');
+const router = require('./router.js');
 const app = express();
 const port = 3000;
+app.use(express.json());
 
 app.use(express.static('public'));
-
-
-app.get('/', (req, res) => {
-  res.send('Testing get request from server');
-})
-
-
-app.post('/', (req, res) => {
-  res.send('Testing post request from server');
-})
-
-
+app.use('/', router);
 
 app.listen(port, () => {
   console.log(`Listening at http://localhost:${port}`)
 })
+

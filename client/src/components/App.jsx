@@ -9,7 +9,9 @@ class App extends React.Component {
     }
   }
 
-
+  componentDidMount() {
+    create.post()
+  }
 
 
 

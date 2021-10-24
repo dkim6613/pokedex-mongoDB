@@ -1,13 +1,51 @@
+//MongoDB
 const mongoose = require('mongoose');
-await mongoose.connect('mongodb://localhost/pokemon');
 
-const Schema = mongoose.Schema;
+main().catch(err => console.log(err));
 
-const mySchema = new Schema({
+async function main() {
+  await mongoose.connect('mongodb://localhost:27017/');
+}
+
+const pokedexSchema = new mongoose.Schema({
   name: String,
   type: String,
   img: String
 })
 
-const Model = mongoose.model('Model', mySchema)
+module.exports = mongoose.model('pokedex', pokedexSchema)
 
+// module.exports.create = async(pokemon) => {
+//   if (!pokemon) {
+//     throw new Error('missing pokemon')
+//   }
+//   await pokedexModel.create(pokemon)
+// }
+
+// module.exports.find = async() => {
+//   console.log('pokedexModel: ', pokedexModel)
+//   await pokedexModel.find({}, function(err, pokemons) {
+//     if (err) {
+//       console.log(err)
+//     } else {
+//       console.log(pokemons)
+//     }
+//   })
+// }
+
+
+//mySQL
+/*
+const mysql = require('mysql2');
+
+const connection = mysql.createConnection({
+  user: 'root',
+  password: '',
+  database: 'pokedex'
+})
+
+connection.connect();
+
+module.exports = connection;
+
+*/
