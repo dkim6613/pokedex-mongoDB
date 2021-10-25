@@ -1,19 +1,19 @@
 //MongoDB
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
 
-main().catch(err => console.log(err));
+// main().catch(err => console.log(err));
 
-async function main() {
-  await mongoose.connect('mongodb://localhost:27017/');
-}
+// async function main() {
+//   await mongoose.connect('mongodb://localhost:27017/');
+// }
 
-const pokedexSchema = new mongoose.Schema({
-  name: String,
-  type: String,
-  img: String
-})
+// const pokedexSchema = new mongoose.Schema({
+//   name: String,
+//   type: String,
+//   img: String
+// })
 
-module.exports = mongoose.model('pokedex', pokedexSchema)
+// module.exports = mongoose.model('pokedex', pokedexSchema)
 
 // module.exports.create = async(pokemon) => {
 //   if (!pokemon) {
@@ -35,7 +35,7 @@ module.exports = mongoose.model('pokedex', pokedexSchema)
 
 
 //mySQL
-/*
+
 const mysql = require('mysql2');
 
 const connection = mysql.createConnection({
@@ -48,4 +48,4 @@ connection.connect();
 
 module.exports = connection;
 
-*/
+

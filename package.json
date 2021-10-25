@@ -18,7 +18,10 @@
   },
   "homepage": "https://github.com/parkderick/hrla35-review#readme",
   "dependencies": {
+    "axios": "^0.23.0",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
+    "jquery": "^3.6.0",
     "mongoose": "^6.0.12",
     "mysql2": "^2.3.2",
     "react": "^17.0.2",

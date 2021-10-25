@@ -17,8 +17,8 @@ CREATE TABLE images (
 CREATE TABLE pokemon (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
-  typeNum INT,
-  imageNum INT
+  typeNum INT NOT NULL,
+  imageNum INT NOT NULL
 );
 
 INSERT INTO types (type) VALUES ("Grass");
